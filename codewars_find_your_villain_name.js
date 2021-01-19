@@ -34,8 +34,8 @@ The returned value should be a string in the form of "First Name Last Name".
 For example, a birthday of November 18 would return "The Terrifying Teaspoon"
 */
 
-function getVillainName(birthday){
-  const m = ["Evil","Vile","Cruel","Trashy","Despicable","Embarrassing","Disreputable","Atrocious","Twirling","Orange","Terrifying","Awkward"];
-  const d = ["Mustache","Pickle","Hood Ornament","Raisin","Recycling Bin","Potato","Tomato","House Cat","Teaspoon","Laundry Basket"];
-
+const getVillainName = (birthday) => {
+  let firstNames = ["The Evil", "The Vile", "The Cruel", "The Trashy", "The Despicable", "The Embarrassing", "The Disreputable", "The Atrocious", "The Twirling", "The Orange", "The Terrifying", "The Awkward"];
+  let lastNames = ["Mustache", "Pickle", "Hood Ornament", "Raisin", "Recycling Bin", "Potato", "Tomato", "House Cat", "Teaspoon", "Laundry Basket"];
+  return firstNames[birthday.getMonth()] + ' ' + lastNames[birthday.getDate() % 10]
 }
